@@ -8,6 +8,7 @@ class Lemon : public Fruit
 {
 public:
   Lemon();
+  Lemon(std::string const&, int);
   ~Lemon();
   virtual std::string const& getName() const;
 };

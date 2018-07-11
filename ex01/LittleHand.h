@@ -8,7 +8,7 @@ class LittleHand
 public:
   LittleHand();
   ~LittleHand();
-  void sortFruitBox(FruitBox& unsorted,
+  static void sortFruitBox(FruitBox& unsorted,
 			FruitBox& lemons,
 			FruitBox& bananas,
 			FruitBox& limes);
