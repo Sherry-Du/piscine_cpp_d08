@@ -1,6 +1,6 @@
 #include "FruitBox.h"
 
-FruitBox::FruitBox(int size) : _size(size), _list(NULL)
+FruitBox::FruitBox(int size) : _size(size), _list(NULL), _count(0)
 {}
 
 FruitBox::~FruitBox()
@@ -17,14 +17,14 @@ FruitBox::~FruitBox()
 
 int FruitBox::nbFruits() const
 {
-  FruitNode* tmp = _list;
+  /*FruitNode* tmp = _list;
   int count = 0;
   while(tmp && tmp->elem)
   {
     count++;
     tmp = tmp->next;
-  }
-  return count;
+  }*/
+  return this->_count;
 }
 
 bool FruitBox::putFruit(Fruit const* add)
@@ -33,11 +33,12 @@ bool FruitBox::putFruit(Fruit const* add)
   FruitNode* addNode = new FruitNode;
   addNode->elem = add;
   addNode->next = NULL;
-  if (nbFruits() >= _size)
+  if (_count >= _size)
     return false;
   else if (tmp == NULL)
   {
     _list = addNode;
+    _count += 1;
     return true;
   }
   while (tmp->next)
@@ -50,8 +51,11 @@ bool FruitBox::putFruit(Fruit const* add)
   if (tmp->elem == add)
     return false;
   else
+  {
     tmp->next = addNode;
-  return true;
+    _count += 1;
+    return true;
+  }
 }
 
 Fruit* FruitBox::pickFruit()
@@ -64,6 +68,7 @@ Fruit* FruitBox::pickFruit()
     {
       ret = tmp->elem;
       _list = _list->next;
+      _count -= 1;
       delete tmp;
       return const_cast<Fruit*>(ret);
     }

@@ -18,6 +18,7 @@ public:
 private:
   int _size;
   FruitNode* _list;
+  int _count;
 };
 
 #endif
