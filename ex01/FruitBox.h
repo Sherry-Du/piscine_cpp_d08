@@ -7,7 +7,7 @@
 class FruitBox
 {
 public:
-  FruitBox(unsigned int const size);
+  FruitBox(unsigned int size);
   ~FruitBox();
 
   unsigned int nbFruits() const;

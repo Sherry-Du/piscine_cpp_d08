@@ -38,7 +38,7 @@ bool FruitBox::putFruit(Fruit const* add)
   else if (tmp == NULL)
   {
     _list = addNode;
-    _count += 1;
+    this->_count += 1;
     return true;
   }
   while (tmp->next)
@@ -53,7 +53,7 @@ bool FruitBox::putFruit(Fruit const* add)
   else
   {
     tmp->next = addNode;
-    _count += 1;
+    this->_count += 1;
     return true;
   }
 }
@@ -68,7 +68,7 @@ Fruit* FruitBox::pickFruit()
     {
       ret = tmp->elem;
       _list = _list->next;
-      _count -= 1;
+      this->_count -= 1;
       delete tmp;
       return const_cast<Fruit*>(ret);
     }
