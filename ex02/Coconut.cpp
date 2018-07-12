@@ -6,7 +6,7 @@ Coconut::Coconut() : Fruit("coconut", 15)
 Coconut::~Coconut()
 {}
 
-std::string const& Coconut::getName() const
+std::string Coconut::getName() const
 {
   return _name;
 }

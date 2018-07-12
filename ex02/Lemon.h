@@ -10,7 +10,7 @@ public:
   Lemon();
   Lemon(std::string const& name, int vit);
   ~Lemon();
-  virtual std::string const& getName() const;
+  virtual std::string getName() const;
 };
 
 #endif

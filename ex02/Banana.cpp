@@ -4,7 +4,7 @@ Banana::Banana() : Fruit("banana", 5){}
 
 Banana::~Banana(){}
 
-std::string const& Banana::getName() const
+std::string Banana::getName() const
 {
   return _name;
 }

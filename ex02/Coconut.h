@@ -9,7 +9,7 @@ class Coconut : public Fruit
 public:
   Coconut();
   ~Coconut();
-  virtual std::string const& getName() const;
+  virtual std::string getName() const;
 };
 
 #endif

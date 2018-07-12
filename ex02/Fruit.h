@@ -9,7 +9,7 @@ class Fruit
 public:
   Fruit(std::string const&, int);
   virtual ~Fruit();
-  virtual std::string const& getName() const = 0;
+  virtual std::string getName() const = 0;
   virtual int getVitamins() const;
   
  protected:
