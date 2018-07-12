@@ -7,18 +7,18 @@
 class FruitBox
 {
 public:
-  FruitBox(int const size);
+  FruitBox(unsigned int const size);
   ~FruitBox();
 
-  int nbFruits() const;
+  unsigned int nbFruits() const;
   bool putFruit(Fruit const* f);
   Fruit* pickFruit();
   FruitNode* head() const;
 
 private:
-  int _size;
+  const unsigned int _size;
   FruitNode* _list;
-  int _count;
+  unsigned int _count;
 };
 
 #endif

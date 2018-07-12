@@ -8,7 +8,7 @@ class Lemon : public Fruit
 {
 public:
   Lemon();
-  Lemon(std::string const&, int);
+  Lemon(std::string const& name, unsigned int vit);
   ~Lemon();
   virtual std::string getName() const;
 };

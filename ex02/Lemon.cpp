@@ -2,7 +2,7 @@
 
 Lemon::Lemon() : Fruit("lemon", 3){}
 
-Lemon::Lemon(std::string const& name, int vit) : Fruit(name, vit)
+Lemon::Lemon(std::string const& name, unsigned int vit) : Fruit(name, vit)
 {
 }
 

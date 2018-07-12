@@ -7,14 +7,14 @@ class Fruit
 {
 
 public:
-  Fruit(std::string const&, int);
+  Fruit(std::string const&, unsigned int);
   virtual ~Fruit();
   virtual std::string getName() const = 0;
-  virtual int getVitamins() const;
+  virtual unsigned int getVitamins() const;
   
  protected:
   std::string const _name;
-  int _vitamins;
+  unsigned int _vitamins;
   
 };
 

@@ -45,7 +45,7 @@ void LittleHand::sortFruitBox(FruitBox& unsorted,
 FruitBox* const* LittleHand::organizeCoconut(Coconut const* const* coconuts_packet)
 {
   FruitBox** ret;
-  int i = 0, j = 0;
+  unsigned int i = 0, j = 0;
   
   while (coconuts_packet[i])
     i++;
@@ -58,7 +58,7 @@ FruitBox* const* LittleHand::organizeCoconut(Coconut const* const* coconuts_pack
   while (coconuts_packet[i])
   {
     ret[j] = new FruitBox(6);
-    for (int k = 0; k < 6; k++)
+    for (unsigned int k = 0; k < 6; k++)
     {
       if (!coconuts_packet[i])
 	return const_cast<FruitBox* const*>(ret);

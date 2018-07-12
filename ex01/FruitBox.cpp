@@ -1,6 +1,6 @@
 #include "FruitBox.h"
 
-FruitBox::FruitBox(int size) : _size(size), _list(NULL), _count(0)
+FruitBox::FruitBox(unsigned int size) : _size(size), _list(NULL), _count(0)
 {}
 
 FruitBox::~FruitBox()
@@ -15,7 +15,7 @@ FruitBox::~FruitBox()
   
 }
 
-int FruitBox::nbFruits() const
+unsigned int FruitBox::nbFruits() const
 {
   /*FruitNode* tmp = _list;
   int count = 0;
