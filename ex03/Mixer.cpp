@@ -1,0 +1,4 @@
+
+
+Mixer() : _plugged(false)
+{}
